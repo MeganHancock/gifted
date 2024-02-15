@@ -1,4 +1,4 @@
-export class ReceivedGift {
+export class Gift {
 
     constructor(data) {
         this.tag = data.tag
