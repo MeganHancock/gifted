@@ -9,9 +9,16 @@ class ObservableAppState extends EventEmitter {
   account = null
 
   /**
+ * @type {Gift[] | null}
+  */
+  receivedGifts = null
+
+
+
+  /**
  * @type {Gift | null}
- */
-  receivedGift = null
+  */
+  activeGift = null
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())

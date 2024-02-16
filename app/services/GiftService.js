@@ -1,6 +1,9 @@
 import { AppState } from "../AppState.js";
 import { Gift } from "../models/Gift.js";
 import { api } from "./AxiosService.js";
+import { setHTML, setText } from "../utils/Writer.js";
+
+
 
 class GiftService {
     async getSandboxGifts() {
@@ -9,7 +12,7 @@ class GiftService {
         console.log(response.data);
         const newGifts = response.data.map(giftPOJO => new Gift(giftPOJO))
         console.log(newGifts);
-        AppState.receivedGift = newGifts
+        AppState.receivedGifts = newGifts
     }
 
 
